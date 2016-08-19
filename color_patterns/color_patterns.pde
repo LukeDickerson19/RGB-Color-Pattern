@@ -1,11 +1,11 @@
 // screen dimensions
-float s_x = 750;
-float s_y = 500;
+float s_x = 750; // width
+float s_y = 500; // height
 
-float t = 0; // t = time position on screen
-float time = 0; // time = time
-float cycles = 0; // loops = number of screen cycles have happened
-float speed = 2;
+float t = 0; // t = time position on screen, so it resets when the graph resets
+float time = 0; // time = time, as in real time
+float cycles = 0; // cycles = the number of times the graph has been displayed
+float speed = 2; // the speed at  which time is incremented
 
 // Figure 1:
 // overall color that fluxuates with time, dimensions and location
@@ -50,18 +50,31 @@ float T1 = f4w/2;
 float T2 = T1/12;
 int a = 0;
 
-void setup() {
+void setup() { // this method sets up the Processing GUI and is always the first method run by the program
   size (int(s_x), int(s_y)); // windown size (width,height)
-  background(0,0,0); // initial white background
-  windows();
+  background(0); // initial black background
+  windows(); // set up the windows to display the figures in
 }
 
-void draw () {
- 
- for (int i = 0; i < rgb.length; i++) {
-   rgb[i] = sine(rgb[i],phase[i],time);
-   //rgb[i] = invert(rgb[i],time);
-   f2(rgb[i],index[i]);
+void windows(){ // this method sets up each window
+  window(f1x, f1y, f1w, f1h); // window 1
+  window(f2x, f2y, f2w, f2h); // window 2
+  window(f3x, f3y, f3w, f3h); // window 3
+  window(f4x, f4y, f4w, f4h); // window 4
+}
+
+void window(float x, float y, float w, float h) { // this method creates a window (which displays a figure)
+  strokeWeight(1); // border with thickness of 1
+  stroke(255); // border with color of white
+  fill(255); // initially set window to be white
+  rect(x, y, w, h); // create window
+}
+
+void draw () { // this method is run over and over again after the setup method
+ for (int i = 0; i < rgb.length; i++) { // for each color: red, green, and blue
+   rgb[i] = sine(rgb[i],phase[i],time); // fluctuate it over time according to the sine equation
+   //rgb[i] = invert(rgb[i],time); // 
+   f2(rgb[i],index[i]); // display the 
    f4(rgb[i],index[i],t);
  }
  f1(rgb[0],rgb[1],rgb[2]);
@@ -77,15 +90,7 @@ void draw () {
  }
 }
 
-void windows() {
-  strokeWeight(1);
-  stroke(255,255,255);
-  fill(255,255,255); // white inside
-  rect(f1x,f1y,f1w,f1h); // window 1
-  rect(f2x,f2y,f2w,f2h); // window 2
-  rect(f3x,f3y,f3w,f3h); // window 3
-  rect(f4x,f4y,f4w,f4h); // window 4
-}
+
 
 int linear(int x, int i, float time) { 
  int slope = 3;
@@ -100,7 +105,7 @@ int linear(int x, int i, float time) {
  return x;
 }
 
-int sine(int x, int p, float t) {
+int sine(int x, int p, float t) { // 
   float p_rad = map(p,0,255,0,TWO_PI);
   float t_rad = map(t,0,f4w,0,TWO_PI);
   int b = int(255/2*0.5*(1+sin((map(t%T1,0,T1,0,TWO_PI)))));
@@ -139,7 +144,7 @@ void f1(int r, int g, int b) {
  strokeWeight(1);
  stroke(r,g,b);
  fill(r,g,b);
- rect( f1x, f1y, f1w, f1h );
+ rect(f1x, f1y, f1w, f1h);
 }
 
 void f2(int x, int i) {
