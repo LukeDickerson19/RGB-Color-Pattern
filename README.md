@@ -19,4 +19,8 @@ The purpose of this program was just out of curiousity to see if a rainbow would
 
 # Installation:
 
+<<<<<<< HEAD
 This program was written in Processing version 2.2.1 (based on Java) which can be downloaded here: https://processing.org/download/
+=======
+This program was written in Processing version 2.2.1 (based on Java) which can be downloaded here: https://processing.org/download/
+>>>>>>> 71f10df7f42da41419db39b9ecdaf74fe3751c7a
