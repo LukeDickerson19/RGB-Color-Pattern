@@ -15,7 +15,7 @@ Window 4: displays each RGB value plotted over horizontal axis <br />
 
 # Motivation:
 
-The purpose of this program was just out of curiousity to see if a rainbow would be created from the the overall color when its RGB values each fluctuated like a sine wave over time but were offset from each other (aka out of phase). The answer is yes, but red, green and blue are strongests, and yellow, orange, and violete are weaker. After the rainbow was made, fluctuating the RGB ratios in other ways was experimented with to see what other color patterns could be made.
+The purpose of this program was just out of curiousity to see if a rainbow would be created from the the overall color when its RGB values each fluctuated like a sine wave over time but were offset from each other (aka out of phase). The answer is yes. After the rainbow was made, fluctuating the RGB ratios in other ways was experimented with to see what other color patterns could be made.
 
 ![results](https://github.com/PopeyedLocket/RGB-Color-Pattern/blob/master/images/rainbow_pattern_test2.png?raw=true "Other Patterns")
 
