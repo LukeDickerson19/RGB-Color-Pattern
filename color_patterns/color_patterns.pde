@@ -51,7 +51,7 @@ float T2 = T1/12;
 int a = 0;
 
 void setup() { // this method sets up the Processing GUI and is always the first method run by the program
-  size (int(s_x), int(s_y)); // windown size (width,height)
+  size (750, 500); // windown size (width,height)
   background(0); // initial black background
   windows(); // set up the windows to display the figures in
 }
