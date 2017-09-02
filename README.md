@@ -2,14 +2,14 @@
 
 # Synopsis:
 
-This program displays the RGB color ratio in 4 different windows in 4 different ways in the Processing GUI to show the viewer how the overall color is effected when each RGB value fluctuates over time according to various equations.
+This program displays the RGB color ratio in 4 different windows in 4 different ways in the Processing GUI to show the viewer how the overall color is effected when each RGB value fluctuates over time according to sine waves.
 
 ![results](https://github.com/PopeyedLocket/RGB-Color-Pattern/blob/master/images/rgb_rainbow_smooth.png?raw=true "Results")
 
-Window 1: displays overall color that fluxuates with time
-Window 2: displays RGB bar chart that fluxuates with time
-Window 3: displays overall color with time plotted over horizontal axis
-Window 4: displays each RGB value plotted over horizontal axis
+Window 1: displays overall color that fluxuates with time <br />
+Window 2: displays RGB bar chart that fluxuates with time <br />
+Window 3: displays overall color with time plotted over horizontal axis <br />
+Window 4: displays each RGB value plotted over horizontal axis <br />
 
 
 
